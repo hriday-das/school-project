@@ -1,59 +1,35 @@
-
-# Angular specific
-/dist/
-/out-tsc/
-/tmp/
-/coverage/
-/e2e/test-output/
-/.angular/
-.angular/
-
-# Node modules and dependency files
-/node_modules/
-/package-lock.json
-/yarn.lock
-
-# Environment files
-/.env
-
-# Angular CLI and build artefacts
-/.angular-cli.json
-/.ng/
-
-# TypeScript cache
-*.tsbuildinfo
-
-# Logs
+# ========================
+# Node / Backend
+# ========================
+node_modules/
+.env
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-# Angular build files
-dist/
+
+# ========================
+# Angular / Frontend
+# ========================
 .angular/
+dist/
 out-tsc/
+*.tsbuildinfo
 
-# Node modules
-node_modules/
+# ========================
+# Build / Temp
+# ========================
+tmp/
+temp/
+coverage/
 
-# Logs
-npm-debug.log
-yarn-error.log
-
-# Environment files
-.env
-
-# IDE files
+# ========================
+# IDE / Editor
+# ========================
 .vscode/
 .idea/
 
+# ========================
 # OS files
+# ========================
 .DS_Store
 Thumbs.db
-
-# Temporary files
-tmp/
-temp/
-
-# Testing
-coverage/
-
