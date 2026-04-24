@@ -1,0 +1,26 @@
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+
+  <div class="container">
+
+    <!-- FORM -->
+    <form (ngSubmit)="onSubmit()" #form="ngForm" class="form">
+      <input type="text" name="name" [(ngModel)]="formData.name" placeholder="Your Name" required>
+      
+      <input type="email" name="email" [(ngModel)]="formData.email" placeholder="Your Email" required>
+      
+      <textarea name="message" [(ngModel)]="formData.message" placeholder="Your Message" rows="4" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- INFO -->
+    <div class="info">
+      <h3>Get in Touch</h3>
+      <p>📍 Kolkata, India</p>
+      <p>📧 school@email.com</p>
+      <p>📞 +91 9876543210</p>
+    </div>
+
+  </div>
+</section>

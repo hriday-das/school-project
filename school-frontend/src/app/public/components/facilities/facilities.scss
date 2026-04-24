@@ -1,0 +1,58 @@
+.facilities-page {
+  padding: 60px 20px;
+}
+
+.main-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.facility-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.facility-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.content {
+  flex: 1;
+}
+
+.content h3 {
+  margin-bottom: 10px;
+}
+
+.content p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content li {
+  margin-bottom: 5px;
+}
+
+.facility-section img {
+  width: 420px;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .facility-section {
+    flex-direction: column;
+  }
+
+  .facility-section.reverse {
+    flex-direction: column;
+  }
+}

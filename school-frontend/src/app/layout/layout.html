@@ -1,0 +1,46 @@
+<!-- LOADER -->
+<div *ngIf="loader.loading" class="loader-overlay">
+  <div class="loader-box">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
+</div>
+
+<div class="layout">
+
+  <!-- HEADER (TOP FULL WIDTH) -->
+  
+    <app-header></app-header>
+ 
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- SIDEBAR MENU -->
+    <aside class="sidebar">
+      <ul class="menu">
+        <li routerLink="/admin/dashboard" routerLinkActive="active">📊 Dashboard</li>
+        <li routerLink="/admin/students" routerLinkActive="active">👨‍🎓 Students</li>
+        <li routerLink="/admin/fees" routerLinkActive="active">💰 Fees</li>
+        <!--<li routerLink="/login">🚪 Logout</li>-->
+      </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+
+  </div>
+
+  <!-- FOOTER -->
+  <app-footer></app-footer>
+
+</div>
+
+<!-- TOAST -->
+<div *ngIf="toast.message"
+     class="toast"
+     [ngClass]="toast.type">
+  {{ toast.message }}
+</div>

@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<section id="achievers" class="achievers-section">
+  <div class="container">
+
+    <h2 class="title">🎓 Top Achievers</h2>
+    <p class="subtitle">Celebrating our brightest students</p>
+
+    <div class="grid">
+      <div class="card" *ngFor="let student of achievers">
+
+        <div class="image-wrapper">
+          <img [src]="student.image" [alt]="student.name">
+          <span class="badge">{{ student.rank }}</span>
+        </div>
+
+        <h3>{{ student.name }}</h3>
+        <p class="class">{{ student.class }}</p>
+        <p class="marks">Marks: {{ student.marks }}</p>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<app-footer></app-footer>

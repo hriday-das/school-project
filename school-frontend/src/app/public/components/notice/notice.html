@@ -1,0 +1,12 @@
+<section class="notice">
+  <h2>📢 Notice Board</h2>
+
+  <div class="notice-container">
+    <div class="notice-list">
+      <div class="notice-card" *ngFor="let n of scrollingNotices">
+        <h4>{{ n.title }}</h4>
+        <p>{{ n.date }}</p>
+      </div>
+    </div>
+  </div>
+</section>

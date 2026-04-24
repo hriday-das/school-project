@@ -1,0 +1,20 @@
+.container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: start;
+  padding: 20px;
+}
+
+/* IMAGE */
+.image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* NOTICE */
+.notice-wrapper {
+  max-width: 350px;
+}

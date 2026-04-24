@@ -1,0 +1,41 @@
+.notice {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 12px;
+  height: 250px; /* fixed height */
+  overflow: hidden;
+}
+
+/* container */
+.notice-container {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* list animation */
+.notice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  animation: scrollUp 10s linear infinite;
+}
+
+/* card */
+.notice-card {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* animation */
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}

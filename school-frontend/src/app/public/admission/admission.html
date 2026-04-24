@@ -1,0 +1,9 @@
+<h2 class="text-xl mb-3">Admission Form</h2>
+
+<input [(ngModel)]="form.name" placeholder="Name" class="border p-2 mb-2 w-full">
+<input [(ngModel)]="form.class" placeholder="Class" class="border p-2 mb-2 w-full">
+<input [(ngModel)]="form.phone" placeholder="Phone" class="border p-2 mb-2 w-full">
+
+<button (click)="submit()" class="bg-green-500 text-white px-4 py-2">
+  Submit
+</button>

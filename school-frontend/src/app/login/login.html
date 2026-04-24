@@ -1,0 +1,24 @@
+
+<div class="login-page">
+
+  <div class="login-card">
+
+    <h2>Admin Login</h2>
+    <p class="subtitle">Welcome back! Please login</p>
+
+    <div class="input-group">
+      <input [(ngModel)]="username" placeholder="Username" />
+    </div>
+
+    <div class="input-group">
+      <input [(ngModel)]="password" type="password" placeholder="Password" />
+    </div>
+
+    <button (click)="onLogin()">Login</button>
+
+    <p class="error" *ngIf="error">{{ error }}</p>
+
+  </div>
+
+</div>
+

@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<section class="faculty">
+
+  <!-- PRINCIPAL -->
+  <div id="principal" class="section">
+    <h2>👨‍🏫 Principal</h2>
+
+    <div class="principal-card">
+      <img [src]="principal.image" [alt]="principal.name">
+      <div>
+        <h3>{{ principal.name }}</h3>
+        <p>{{ principal.role }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEACHERS -->
+  <div id="teachers" class="section">
+    <h2>👩‍🏫 Teachers</h2>
+
+    <div class="grid">
+      <div class="card" *ngFor="let t of teachers">
+        <img [src]="t.image" [alt]="t.name">
+        <h3>{{ t.name }}</h3>
+        <p>{{ t.role }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- STAFF -->
+  <div id="staff" class="section">
+    <h2>🧑‍💼 Staff</h2>
+
+    <div class="grid">
+      <div class="card" *ngFor="let s of staff">
+        <img [src]="s.image" [alt]="s.name">
+        <h3>{{ s.name }}</h3>
+        <p>{{ s.role }}</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+<app-footer></app-footer>

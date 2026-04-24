@@ -1,0 +1,109 @@
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 40px;
+  background: #1e293b;
+  color: white;
+}
+
+/* MENU */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.menu li {
+  position: relative;
+}
+
+/* LINKS */
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 10px;
+  display: block;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #38bdf8;
+}
+
+/* DROPDOWN */
+.submenu {
+  position: absolute;
+  top: 45px;
+  left: 0;
+
+  background: white;
+  color: black;
+  min-width: 200px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+/* SUBMENU LINKS */
+.submenu li a {
+  padding: 10px 15px;
+  color: #1e293b;
+}
+
+.submenu li a:hover {
+  background: #f1f5f9;
+}
+
+/* SHOW DROPDOWN WITH ANIMATION */
+.dropdown:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* BUTTON */
+.btn {
+  background: #38bdf8;
+  padding: 6px 14px;
+  border-radius: 6px;
+  color: white;
+}
+
+/* BUTTON HOVER */
+.btn:hover {
+  background: #0ea5e9;
+}
+.menu a {
+  position: relative;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #38bdf8;
+  left: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}

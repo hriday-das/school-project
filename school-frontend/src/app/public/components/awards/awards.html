@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<section id="awards" class="awards-section">
+  <div class="container">
+
+    <h2 class="title">🏆 Awards & Achievements</h2>
+    <p class="subtitle">
+      Celebrating our excellence and milestones over the years.
+    </p>
+
+    <div class="grid">
+      <div class="card" *ngFor="let award of awards">
+        <div class="icon">{{ award.icon }}</div>
+        <h3>{{ award.title }}</h3>
+        <span class="year">{{ award.year }}</span>
+        <p>{{ award.description }}</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<app-footer></app-footer>

@@ -1,0 +1,53 @@
+.contact {
+  padding: 80px 20px;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* FORM */
+.form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form input,
+.form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.form button {
+  background: #38bdf8;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: #0ea5e9;
+}
+
+/* INFO */
+.info {
+  flex: 1;
+  text-align: left;
+}

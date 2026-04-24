@@ -1,0 +1,53 @@
+<nav class="navbar">
+  <div class="logo">🏫 My School</div>
+
+  <ul class="menu">
+
+    <li><a routerLink="/">Home</a></li>
+
+    <!-- ABOUT -->
+    <li class="dropdown">
+      <a href="#">About ▾</a>
+      <ul class="submenu">
+        <li><a routerLink="/" fragment="about">Mission & Vision</a></li>
+        <li><a routerLink="/awards">Awards & Achievements</a></li>
+        <li><a routerLink="/gallery">Photo Gallery</a></li>
+        <li><a routerLink="/top-achievers">Top Achievers</a></li>
+      </ul>
+    </li>
+
+    <!-- ACADEMICS -->
+    <li class="dropdown">
+      <a href="#">Academics ▾</a>
+      <ul class="submenu">
+        <li><a routerLink="/admission">Admission</a></li>
+        <li><a routerLink="/courses">Courses</a></li>
+        <li><a routerLink="/syllabus">Syllabus</a></li>
+        <li><a routerLink="/exam">Examinations</a></li>
+        <li><a routerLink="/result">Results</a></li>
+      </ul>
+    </li>
+
+    <!-- FACULTY (SEPARATE) -->
+    <li class="dropdown">
+      <a href="#">Faculty ▾</a>
+      <ul class="submenu">
+        <li><a routerLink="/faculty" fragment="principal">Principal</a></li>
+        <li><a routerLink="/faculty" fragment="teachers">Teachers</a></li>
+        <li><a routerLink="/faculty" fragment="staff">Staff</a></li>
+      </ul>
+    </li>
+
+    <!-- FACILITIES -->
+    <li>
+      <a routerLink="/" fragment="features">Facilities</a>
+    </li>
+
+    <!-- CONTACT -->
+    <li><a routerLink="/" fragment="contact">Contact</a></li>
+
+    <!-- ADMIN -->
+    <li><a routerLink="/login" class="btn">Admin</a></li>
+
+  </ul>
+</nav>

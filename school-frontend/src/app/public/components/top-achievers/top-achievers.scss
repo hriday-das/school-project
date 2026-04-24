@@ -1,0 +1,65 @@
+.achievers-section {
+  padding: 60px 20px;
+  background: #f4f7fb;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  transition: 0.3s;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #6c63ff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.class {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.marks {
+  font-weight: bold;
+  margin-top: 5px;
+}
