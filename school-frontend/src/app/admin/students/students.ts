@@ -1,21 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ApiService } from '../../services/api';
-import { Observable, of } from 'rxjs';
-import { map, catchError, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-students',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './students.html'
+  templateUrl: './students.html',
+  styleUrl: './students.scss'
+  
 })
 export class StudentsComponent implements OnInit {
 
-  students!: Observable<any[]>;
+  students: any[] = [];
   isLoading = true;
 
-  constructor(private api: ApiService) {}
+  constructor(
+    private api: ApiService,
+    private cd: ChangeDetectorRef 
+  ) {}
 
   ngOnInit() {
     this.loadStudents();
@@ -24,15 +27,23 @@ export class StudentsComponent implements OnInit {
   loadStudents() {
     this.isLoading = true;
 
-    this.students = this.api.getStudents().pipe(
-      map((res: any) => res.data || res),
-      tap(() => this.isLoading = false),
-      catchError(err => {
-        console.error("ERROR:", err);
+    this.api.getStudents().subscribe({
+      next: (res: any) => {
+        console.log("DATA:", res);
+
+        this.students = Array.isArray(res) ? res : [];
         this.isLoading = false;
-        return of([]);
-      })
-    );
+
+        this.cd.detectChanges(); // 🔥 FORCE UI UPDATE
+      },
+      error: (err) => {
+        console.error(err);
+        this.students = [];
+        this.isLoading = false;
+
+        this.cd.detectChanges(); // 🔥 FORCE UI UPDATE
+      }
+    });
   }
 
   addStudent() {

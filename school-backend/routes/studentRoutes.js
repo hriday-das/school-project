@@ -4,6 +4,7 @@ const router = express.Router();
 const {
   createStudent,
   getStudents,
+  
   deleteStudent   // 👈 add this
 } = require("../controllers/studentController");
 

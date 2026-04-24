@@ -5,54 +5,47 @@
 </button>
 
 <table class="table-auto w-full border">
+
   <thead>
     <tr class="bg-gray-200">
       <th>Name</th>
       <th>Class</th>
-      <th>Section</th> 
+      <th>Section</th>
       <th>Phone</th>
-      <th>Age</th>
       <th>Actions</th>
     </tr>
   </thead>
 
-  <!-- MAIN DATA -->
-  <tbody *ngIf="students | async as students; else loadingBlock">
-
-    <!-- If data exists -->
-    <ng-container *ngIf="students.length > 0; else emptyBlock">
-      <tr *ngFor="let s of students; trackBy: trackByFn">
-        <td>{{ s.name }}</td>
-        <td>{{ s.class }}</td>
-        <td>{{ s.section }}</td>
-        <td>{{ s.phone }}</td>
-        <td>{{ s.age }}</td>
-        <td>
-          <button (click)="deleteStudent(s._id)" class="text-red-500">
-            Delete
-          </button>
-        </td>
-      </tr>
-    </ng-container>
-
-  </tbody>
-
   <!-- LOADING -->
-  <ng-template #loadingBlock>
+  <tbody *ngIf="isLoading">
     <tr>
       <td colspan="6" class="text-center py-3">
         Loading students...
       </td>
     </tr>
-  </ng-template>
+  </tbody>
 
-  <!-- EMPTY -->
-  <ng-template #emptyBlock>
-    <tr>
+  <!-- DATA -->
+  <tbody *ngIf="!isLoading">
+
+    <tr *ngIf="students.length === 0">
       <td colspan="6" class="text-center py-3">
         No students found
       </td>
     </tr>
-  </ng-template>
+
+    <tr *ngFor="let s of students; trackBy: trackByFn">
+      <td>{{ s.name }}</td>
+      <td>{{ s.class }}</td>
+      <td>{{ s.section }}</td>
+      <td>{{ s.phone }}</td>
+      <td>
+        <button (click)="deleteStudent(s._id)" class="text-red-500">
+          Delete
+        </button>
+      </td>
+    </tr>
+
+  </tbody>
 
 </table>

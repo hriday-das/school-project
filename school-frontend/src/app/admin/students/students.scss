@@ -1,0 +1,86 @@
+/* Title */
+h2 {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Button */
+button {
+  border-radius: 6px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+  th,
+  td {
+    padding: 12px 14px;
+    text-align: left;
+  }
+
+  th {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    background: #f3f4f6;
+  }
+
+  td {
+    font-size: 14px;
+    color: #4b5563;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  tr {
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: #f9fafb;
+    }
+  }
+}
+
+/* Empty / Loading State */
+td[colspan] {
+  font-style: italic;
+  color: #6b7280;
+}
+
+/* Delete Button */
+.text-red-500 {
+  color: #ef4444;
+  font-weight: 500;
+
+  &:hover {
+    color: #dc2626;
+    text-decoration: underline;
+  }
+}
+
+/* Add Button Specific */
+.bg-blue-500 {
+  background: #3b82f6;
+
+  &:hover {
+    background: #2563eb;
+  }
+}
+
+/* Loader Styling (optional upgrade) */
+tbody tr td {
+  &.loading {
+    text-align: center;
+    padding: 20px;
+  }
+}
