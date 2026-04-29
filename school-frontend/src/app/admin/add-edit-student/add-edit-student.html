@@ -1,0 +1,19 @@
+<h2 class="text-xl mb-4">
+  {{ isEditMode ? 'Edit Student' : 'Add Student' }}
+</h2>
+
+<div class="flex flex-col gap-3 w-80">
+
+  <input [(ngModel)]="student.name" placeholder="Name"  name="name" class="border p-2" />
+  <input [(ngModel)]="student.class" placeholder="Class"  name="class" class="border p-2" />
+  <input [(ngModel)]="student.section" placeholder="Section"  name="section" class="border p-2" />
+  <input [(ngModel)]="student.phone" placeholder="Phone"  name="phone" class="border p-2" />
+  <input [(ngModel)]="student.age" type="number" placeholder="Age"  name="age" class="border p-2" />
+
+  <button 
+    (click)="saveStudent()" 
+    class="bg-blue-500 text-white py-2 rounded">
+    {{ isEditMode ? 'Update' : 'Save' }}
+  </button>
+
+</div>

@@ -14,6 +14,7 @@ import { Gallery } from './public/components/gallery/gallery';
 import { TopAchievers } from './public/components/top-achievers/top-achievers';
 import { Faculty } from './public/components/faculty/faculty';
 import { Facilities } from './public/components/facilities/facilities';
+import { AddEditStudent } from './admin/add-edit-student/add-edit-student';
 
 export const routes: Routes = [
 
@@ -35,7 +36,9 @@ export const routes: Routes = [
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'students', component: StudentsComponent },
-      { path: 'fees', component: FeesComponent }
+      { path: 'fees', component: FeesComponent },
+      { path: 'add-edit-student', component: AddEditStudent },
+      { path: 'add-edit-student/:id', component: AddEditStudent }
     ]
   }
 ];

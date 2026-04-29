@@ -24,7 +24,15 @@ export class ApiService {
   }
   deleteStudent(id: string) {
   return this.http.delete(`${this.baseUrl}/students/${id}`);
+
 }
+  getStudentById(id: string) {
+    return this.http.get(`${this.baseUrl}/students/${id}`);
+  } 
+  updateStudent(id: any, data: any) {
+    return this.http.put(`${this.baseUrl}/students/${id}`, data);
+  }
+
 
   // Fees
   addFee(data: any) {

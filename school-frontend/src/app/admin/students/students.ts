@@ -1,11 +1,12 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ApiService } from '../../services/api';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-students',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './students.html',
   styleUrl: './students.scss'
   
@@ -17,7 +18,7 @@ export class StudentsComponent implements OnInit {
 
   constructor(
     private api: ApiService,
-    private cd: ChangeDetectorRef 
+    private cd: ChangeDetectorRef ,private router: Router 
   ) {}
 
   ngOnInit() {
@@ -47,18 +48,22 @@ export class StudentsComponent implements OnInit {
   }
 
   addStudent() {
-    const data = {
-      name: "Test User",
-      class: "10",
-      section: "A",
-      phone: "9999999999",
-      age: 15
-    };
+    //const data = {
+    //  name: "Test User",
+    //  class: "10",
+    //  section: "A",
+    //  phone: "9999999999",
+    //  age: 15
+    //};
 
-    this.api.addStudent(data).subscribe(() => {
-      this.loadStudents();
-    });
+    //this.api.addStudent(data).subscribe(() => {
+    //  this.loadStudents();
+    //});
+    this.router.navigate(['/admin/add-edit-student']);
   }
+  editStudent(id: string) {
+    this.router.navigate(['/admin/add-edit-student', id]);
+  } 
 
   deleteStudent(id: string) {
     this.api.deleteStudent(id).subscribe(() => {

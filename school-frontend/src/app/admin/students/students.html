@@ -40,6 +40,12 @@
       <td>{{ s.section }}</td>
       <td>{{ s.phone }}</td>
       <td>
+
+        <button 
+          (click)="editStudent(s._id)" 
+          class="text-blue-500 mr-2">
+          Edit
+        </button>
         <button (click)="deleteStudent(s._id)" class="text-red-500">
           Delete
         </button>
